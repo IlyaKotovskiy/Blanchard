@@ -20,7 +20,23 @@
   <title>Blanchard - художественная галерея</title>
 </head>
 
-<body>
+<body style="overflow: hidden;">
+  <div id="preloader" class="preloader">
+    <div class="lds-spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
   <header class="header" id="header">
     <div class="container">
       <nav class="header__nav main-nav">
@@ -263,17 +279,20 @@
               <div class="swiper-wrapper">
                 <button type="button" class="swiper-slide galery-slide btn-reset">
                   <picture class="picture-reset">
-                    <img src="img/galery-img1.jpg" alt="Изображение галереи" class="wow animate__fadeInLeft" data-wow-duration="0.75s">
+                    <img src="img/galery-img1.jpg" alt="Изображение галереи" class="wow animate__fadeInLeft"
+                      data-wow-duration="0.75s">
                   </picture>
                 </button>
                 <button type="button" class="swiper-slide galery-slide btn-reset">
                   <picture class="picture-reset">
-                    <img src="img/galery-img2.jpg" alt="Изображение галереи" class="wow animate__zoomIn" data-wow-duration="0.9s">
+                    <img src="img/galery-img2.jpg" alt="Изображение галереи" class="wow animate__zoomIn"
+                      data-wow-duration="0.9s">
                   </picture>
                 </button>
                 <button type="button" class="swiper-slide galery-slide btn-reset">
                   <picture class="picture-reset">
-                    <img src="img/galery-img3.jpg" alt="Изображение галереи" class="wow animate__fadeInTopRight" data-wow-duration="1.05s">
+                    <img src="img/galery-img3.jpg" alt="Изображение галереи" class="wow animate__fadeInTopRight"
+                      data-wow-duration="1.05s">
                   </picture>
                 </button>
                 <button type="button" class="swiper-slide galery-slide btn-reset">
@@ -336,12 +355,14 @@
           <div class="artists">
             <div class="artist-wrap artist active" data-artist="1">
               <picture class="picture-reset">
-                <img src="img/catalog-img.jpg" alt="Портрет Доменико Гирландайо" class="artist-wrap__img wow animate__fadeInLeft" data-wow-duration="0.75s">
+                <img src="img/catalog-img.jpg" alt="Портрет Доменико Гирландайо"
+                  class="artist-wrap__img wow animate__fadeInLeft" data-wow-duration="0.75s">
               </picture>
-              <h3 class="artist-wrap__title third-title title-reset wow animate__fadeInTopLeft" data-wow-duration="0.75s">
+              <h3 class="artist-wrap__title third-title title-reset wow animate__fadeInTopLeft"
+                data-wow-duration="0.75s">
                 Доменико Гирландайо
               </h3>
-              <time class="artist-wrap__date wow animate__fadeInTopLeft" data-wow-duration="0.75s">
+              <time class="artist-wrap__date wow animate__fadeInTopLeft" data-wow-duration="0.85s">
                 2 июня 1448-11 января 1494
               </time>
               <p class="artist-wrap__desc text-reset wow animate__fadeInUp" data-wow-duration="0.75s">
@@ -859,7 +880,8 @@
       <div class="container">
         <div class="contacts-wrapper">
           <div class="contacts-address">
-            <h3 class="contacts-adress__title third-title title-reset wow animate__slideInLeft" data-wow-duration="0.85s">
+            <h3 class="contacts-adress__title third-title title-reset wow animate__slideInLeft"
+              data-wow-duration="0.85s">
               Шоурум №4
             </h3>
             <address class="contacts-adress__adress wow animate__slideInUp" data-wow-duration="0.95s">
@@ -867,14 +889,16 @@
             </address>
           </div>
           <div class="contacts-form">
-            <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="contacts-form__form" id="contact-form">
+            <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="contacts-form__form"
+              id="contact-form">
               <label class="contacts-form__label wow animate__bounceInUp" data-wow-duration="1s">
                 <input class="contacts-form__input" type="text" name="name" id="contactName" placeholder="Имя*">
               </label>
               <label class="contacts-form__label wow animate__bounceInUp" data-wow-duration="1.15s">
                 <input class="contacts-form__input" type="tel" name="phone" id="contactPhone" placeholder="Телефон*">
               </label>
-              <button class="contacts-form__btn btn-reset wow animate__bounceInUp" type="submit" data-wow-duration="1.25s">Заказать обратный звонок</button>
+              <button class="contacts-form__btn btn-reset wow animate__bounceInUp" type="submit"
+                data-wow-duration="1.25s">Заказать обратный звонок</button>
             </form>
           </div>
           <div class="contacts-contact wow animate__fadeInRight" data-wow-duration="1.35s">

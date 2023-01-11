@@ -1,3 +1,12 @@
+// PRELOADER
+
+window.onload = () => {
+  document.getElementById("preloader").style.display = "none";
+  document.body.style.overflow = "auto";
+};
+
+
+
 // CUSTOM SELECT
 
 // main
@@ -189,41 +198,41 @@ const validation = new JustValidate('.contacts-form__form', {
   }
 });
 
-validation.onSuccess(function() {
+validation.onSuccess(function () {
   document.querySelector('.contacts-form__form').submit()
 });
 
 validation
   .addField('#contactName', [
-  {
-    rule: 'required',
-    errorMessage: 'Как вас зовут?',
-  },
-  {
-    rule: 'minLength',
-    value: 3,
-    errorMessage: 'Не короче 3 символов',
-  },
-  {
-    rule: 'maxLength',
-    value: 30,
-    errorMessage: 'Слишком длинное имя',
-  },
-])
-  .addField('#contactPhone', [
-  {
-    rule: 'required',
-    errorMessage: 'Укажите ваш телефон',
-  },
-  {
-    validator: (value) => {
-      const phone = selector.inputmask.unmaskedvalue()
-      console.log(phone)
-      return Number(phone) && phone.length === 10;
+    {
+      rule: 'required',
+      errorMessage: 'Как вас зовут?',
     },
-    errorMessage: 'Телефон не корректный!',
-  },
-]);
+    {
+      rule: 'minLength',
+      value: 3,
+      errorMessage: 'Не короче 3 символов',
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+      errorMessage: 'Слишком длинное имя',
+    },
+  ])
+  .addField('#contactPhone', [
+    {
+      rule: 'required',
+      errorMessage: 'Укажите ваш телефон',
+    },
+    {
+      validator: (value) => {
+        const phone = selector.inputmask.unmaskedvalue()
+        console.log(phone)
+        return Number(phone) && phone.length === 10;
+      },
+      errorMessage: 'Телефон не корректный!',
+    },
+  ]);
 
 
 // WOW
