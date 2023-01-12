@@ -20,7 +20,7 @@
   <title>Blanchard - художественная галерея</title>
 </head>
 
-<body style="overflow: hidden;">
+<body class="overflow hidden">
   <div id="preloader" class="preloader">
     <div class="lds-spinner">
       <div></div>
@@ -40,8 +40,18 @@
   <header class="header" id="header">
     <div class="container">
       <nav class="header__nav main-nav">
+        <button type="button" class="header-mobile-btn btn-reset">
+          <svg viewBox="0 0 64 48">
+            <path d="M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37"></path>
+            <path d="M19,24 L45,24 C61.2371586,24 57,49 41,33 L32,24"></path>
+            <path d="M45,33 L19,33 C-8,33 6,-2 22,14 L45,37"></path>
+          </svg>
+        </button>
         <a class="main-nav__logo">
-          <img src="img/logo.svg" alt="Логотип Бланчард">
+          <picture class="picture-reset">
+            <source media="(max-width: 1400px)" srcset="img/logo-1024.svg">
+            <img src="img/logo.svg" alt="Логотип Бланчард">
+          </picture>
         </a>
         <ul class="main-nav__list list-reset">
           <li class="main-nav__item">
@@ -66,11 +76,6 @@
           </li>
           <li class="main-nav__item">
             <a href="#" class="main-nav__link link-reset">
-              Издания
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#" class="main-nav__link link-reset">
               Проекты
             </a>
           </li>
@@ -89,10 +94,18 @@
           </svg>
           Войти
         </a>
+        <form method="get" class="header-mobile-form">
+          <button class="nav-form__button btn-reset" type="button"></button>
+          <input class="nav-form__input" type="text" name="search">
+          <button type="button" class="header-mobile-form__cancel-btn btn-reset">
+            <span></span>
+            <span></span>
+          </button>
+        </form>
       </nav>
     </div>
   </header>
-  <main>
+  <main id="main">
     <section class="main-screen wow animate__fadeIn" data-wow-duration="0.5s" id="main-screen">
       <div class="swiper main-swiper">
         <div class="swiper-wrapper">
@@ -213,7 +226,7 @@
         </div>
       </div>
     </section>
-    <section class="about section-offset" id="about">
+    <section class="about" id="about">
       <div class="container">
         <div class="about-wrap">
           <h2 class="about-wrap__title title-reset second-title wow animate__fadeInUp" data-wow-duration="0.75s">
@@ -232,7 +245,7 @@
         </div>
       </div>
     </section>
-    <section class="galery section-offset wow animate__fadeIn" id="galery" data-wow-duration="0.5s">
+    <section class="galery wow animate__fadeIn" id="galery" data-wow-duration="0.5s">
       <div class="container">
         <h2 class="galery__title title-reset second-title wow animate__fadeInUp" data-wow-duration="0.75s">
           Галерея
@@ -279,44 +292,53 @@
               <div class="swiper-wrapper">
                 <button type="button" class="swiper-slide galery-slide btn-reset">
                   <picture class="picture-reset">
-                    <img src="img/galery-img1.jpg" alt="Изображение галереи" class="wow animate__fadeInLeft"
+                    <source media="(max-width: 1400px)" srcset="img/galery-1024-img1.jpg"
+                      class="wow animate__fadeInLeft galery-img" data-wow-duration="0.75s">
+                    <img src="img/galery-img1.jpg" alt="Изображение галереи" class="wow animate__fadeInLeft galery-img"
                       data-wow-duration="0.75s">
                   </picture>
                 </button>
                 <button type="button" class="swiper-slide galery-slide btn-reset">
                   <picture class="picture-reset">
-                    <img src="img/galery-img2.jpg" alt="Изображение галереи" class="wow animate__zoomIn"
+                    <source media="(max-width: 1400px)" srcset="img/galery-1024-img2.jpg"
+                      class="wow animate__zoomIn galery-img" data-wow-duration="0.75s">
+                    <img src="img/galery-img2.jpg" alt="Изображение галереи" class="wow animate__zoomIn galery-img"
                       data-wow-duration="0.9s">
                   </picture>
                 </button>
                 <button type="button" class="swiper-slide galery-slide btn-reset">
                   <picture class="picture-reset">
-                    <img src="img/galery-img3.jpg" alt="Изображение галереи" class="wow animate__fadeInTopRight"
+                    <source media="(max-width: 1400px)" srcset="img/galery-1024-img3.jpg" class="galery-img">
+                    <img src="img/galery-img3.jpg" alt="Изображение галереи" class="wow animate__fadeInTopRight galery-img"
                       data-wow-duration="1.05s">
                   </picture>
                 </button>
                 <button type="button" class="swiper-slide galery-slide btn-reset">
                   <picture class="picture-reset">
-                    <img src="img/galery-img4.jpg" alt="Изображение галереи">
+                    <source media="(max-width: 1400px)" srcset="img/galery-1024-img4.jpg" class="galery-img">
+                    <img src="img/galery-img4.jpg" alt="Изображение галереи" class="galery-img">
                   </picture>
                 </button>
                 <button type="button" class="swiper-slide galery-slide btn-reset">
                   <picture class="picture-reset">
-                    <img src="img/galery-img5.jpg" alt="Изображение галереи">
+                    <source media="(max-width: 1400px)" srcset="img/galery-1024-img5.jpg" class="galery-img">
+                    <img src="img/galery-img5.jpg" alt="Изображение галереи" class="galery-img">
                   </picture>
                 </button>
                 <button type="button" class="swiper-slide galery-slide btn-reset">
                   <picture class="picture-reset">
-                    <img src="img/galery-img6.jpg" alt="Изображение галереи">
+                    <source media="(max-width: 1400px)" srcset="img/galery-1024-img6.jpg" class="galery-img">
+                    <img src="img/galery-img6.jpg" alt="Изображение галереи" class="galery-img">
                   </picture>
                 </button>
               </div>
             </div>
           </div>
         </div>
-        <div class="galery-modal">
+        <div class="galery-modal overflow">
           <div class="modal-wrap">
             <picture class="picture-reset">
+              <source media="(max-width: 1400px)" srcset="img/galery-1024-modal.jpg">
               <img src="img/galery-modal.jpg" alt="«Женщина с граблями»">
             </picture>
             <div class="modal-content">
@@ -421,10 +443,10 @@
                         Брамантино
                       </button>
                       <button type="button" class="years-artists__artist btn-reset" data-acr="2">
-                        Бреа, Людовио
+                        Бреа, Людовико
                       </button>
                       <button type="button" class="years-artists__artist btn-reset" data-acr="2">
-                        Бьяджо д’Анто Туччи
+                        Бьяджо д’Антонио Туччи
                       </button>
                       <button type="button" class="years-artists__artist btn-reset" data-acr="2">
                         Веккьетта
@@ -644,17 +666,19 @@
         <div class="event-slider">
           <div class="event-slider-button-prev"></div>
           <div class="event-slider-button-next"></div>
+          <div class="event-slider-pagination"></div>
           <div class="event-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="event-slide wow animate__fadeInUp" data-wow-duration="0.75s" data-wow-offset="50">
                   <picture class="picture-reset">
-                    <img src="img/event-img1.jpg" class="event-slider__img" alt="">
+                    <source class="event-slider__img" media="(max-width: 1400px)" srcset="img/event-1024-img1.jpg">
+                    <img src="img/event-img1.jpg" class="event-slider__img" alt="Книжная гравюра">
                   </picture>
                   <span class="event-slider__address">Музей им. Щусева</span>
                   <span class="event-slider__address">с 20 марта по 30 апреля</span>
                   <h3 class="event-slider__title third-title title-reset">
-                    Книжная гравюра в живом восприятии
+                    Книжная гравюра в живом<br>восприятии
                   </h3>
                   <p class="event-slider__desc text-reset">
                     Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
@@ -668,7 +692,8 @@
               <div class="swiper-slide">
                 <div class="event-slide wow animate__fadeInUp" data-wow-duration="0.9s" data-wow-offset="50">
                   <picture class="picture-reset">
-                    <img src="img/event-img2.jpg" class="event-slider__img" alt="">
+                    <source class="event-slider__img" media="(max-width: 1400px)" srcset="img/event-1024-img2.jpg">
+                    <img src="img/event-img2.jpg" class="event-slider__img" alt="Фото Дмитрий Петров и Сергей Ильин">
                   </picture>
                   <span class="event-slider__address">ММОМА</span>
                   <span class="event-slider__address">24 марта 19:00</span>
@@ -687,7 +712,8 @@
               <div class="swiper-slide">
                 <div class="event-slide wow animate__fadeInUp" data-wow-duration="1.05s" data-wow-offset="50">
                   <picture class="picture-reset">
-                    <img src="img/event-img3.jpg" class="event-slider__img" alt="">
+                    <source class="event-slider__img" media="(max-width: 1400px)" srcset="img/event-1024-img3.jpg">
+                    <img src="img/event-img3.jpg" class="event-slider__img" alt="Выставка">
                   </picture>
                   <span class="event-slider__address">Еврейский музей</span>
                   <span class="event-slider__address">с 31 марта по 21 апреля</span>
@@ -706,7 +732,8 @@
               <div class="swiper-slide">
                 <div class="event-slide">
                   <picture class="picture-reset">
-                    <img src="img/event-img4.jpg" class="event-slider__img" alt="">
+                    <source class="event-slider__img" media="(max-width: 1400px)" srcset="img/event-1024-img4.jpg">
+                    <img src="img/event-img4.jpg" class="event-slider__img" alt="Фотографии из серии «Метафора»">
                   </picture>
                   <span class="event-slider__address">ММАМ</span>
                   <span class="event-slider__address">с 8 апреля по 20 мая</span>
@@ -725,7 +752,8 @@
               <div class="swiper-slide">
                 <div class="event-slide">
                   <picture class="picture-reset">
-                    <img src="img/event-img5.jpg" class="event-slider__img" alt="">
+                    <source class="event-slider__img" media="(max-width: 1400px)" srcset="img/event-1024-img5.jpg">
+                    <img src="img/event-img5.jpg" class="event-slider__img" alt="Биеннале">
                   </picture>
                   <span class="event-slider__address">Третьяковка на Крымском валу</span>
                   <span class="event-slider__address">с 30 марта по 30 апреля</span>
@@ -882,7 +910,7 @@
           <div class="contacts-address">
             <h3 class="contacts-adress__title third-title title-reset wow animate__slideInLeft"
               data-wow-duration="0.85s">
-              Шоурум №4
+              Шоурум № 4
             </h3>
             <address class="contacts-adress__adress wow animate__slideInUp" data-wow-duration="0.95s">
               Леонтьевский переулок, дом 5/1
