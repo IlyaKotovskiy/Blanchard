@@ -783,6 +783,7 @@ body {
 
 .about {
   padding: 80px 0 70px;
+  background-color: #fff;
 }
 
 .about-wrap {
@@ -797,6 +798,7 @@ body {
   background: url('../img/galery-background.jpg') no-repeat center / cover #000;
   color: #fff;
   padding: 80px 0 84px;
+  background-color: #fff;
 }
 
 .galery__title {
@@ -1233,6 +1235,7 @@ body {
 
 .catalog {
   padding: 80px 0 40px;
+  background-color: #fff;
 }
 
 .catalog__desc {
@@ -1578,6 +1581,7 @@ body {
 
 .event {
   padding: 35px 0;
+  background-color: #fff;
 }
 
 .event-slider {
@@ -1737,6 +1741,7 @@ body {
 
 .projects {
   padding: 45px 0 80px;
+  background-color: #fff;
 }
 
 .projects__desc {
@@ -1891,6 +1896,7 @@ body {
   padding: 35px 0 30px;
   border-top: 1px solid #CACACA;
   border-bottom: 1px solid #CACACA;
+  background-color: #fff;
 }
 
 .contacts-wrapper {
