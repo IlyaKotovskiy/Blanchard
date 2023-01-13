@@ -84,17 +84,29 @@ const swiperGalery = new Swiper('.galery-swiper', {
       slidesPerGroup: 2,
       spaceBetween: 24,
       allowTouchMove: true,
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 38,
+    },
+    577: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 20,
+    },
+    0: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 10,
+      speed: 250,
     }
   }
 });
 
 // events
 const swiperEvent = new Swiper('.event-swiper', {
-  spaceBetween: 50,
-  slidesPerView: 3,
-  slidesPerGroup: 1,
   speed: 500,
-  allowTouchMove: false,
   navigation: {
     nextEl: '.event-slider-button-next',
     prevEl: '.event-slider-button-prev',
@@ -103,7 +115,7 @@ const swiperEvent = new Swiper('.event-swiper', {
     1400: {
       spaceBetween: 50,
       slidesPerView: 3,
-      slidesPerGroup: 3,
+      slidesPerGroup: 1,
       allowTouchMove: false,
     },
     1024: {
@@ -113,6 +125,34 @@ const swiperEvent = new Swiper('.event-swiper', {
       allowTouchMove: true,
       pagination: {
         el: ".event-slider-pagination",
+        clickable: true,
+      },
+    },
+    768: {
+      spaceBetween: 34,
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      pagination: {
+        el: ".event-slider-pagination",
+        clickable: true,
+      },
+    },
+    577: {
+      spaceBetween: 34,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      pagination: {
+        el: ".event-slider-pagination",
+        clickable: true,
+      },
+    },
+    0: {
+      spaceBetween: 10,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      pagination: {
+        el: ".event-slider-pagination",
+        clickable: true,
       },
     }
   }
@@ -135,12 +175,30 @@ const swiperProjects = new Swiper('.projects-swiper', {
     1400: {
       spaceBetween: 50,
       slidesPerView: 3,
-      slidesPerGroup: 3,
+      slidesPerGroup: 1,
       allowTouchMove: false,
     },
     1024: {
       spaceBetween: 50,
       slidesPerView: 2,
+      slidesPerGroup: 1,
+      allowTouchMove: true,
+    },
+    768: {
+      spaceBetween: 34,
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+      allowTouchMove: true,
+    },
+    577: {
+      spaceBetween: 20,
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+      allowTouchMove: true,
+    },
+    0: {
+      spaceBetween: 10,
+      slidesPerView: 1,
       slidesPerGroup: 1,
       allowTouchMove: true,
     }
@@ -275,6 +333,12 @@ validation
 // WOW
 
 new WOW().init();
+
+
+
+// TOOLTIP
+
+tippy('[data-tippy-content]');
 
 
 

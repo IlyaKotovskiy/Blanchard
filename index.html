@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
     rel="stylesheet">
   <!-- CSS -->
+  <link rel="stylesheet" href="">
   <link rel="stylesheet" href="libs/animate.min.css">
   <link rel="stylesheet" href="libs/accordion.min.css">
   <link rel="stylesheet" href="libs/swiper-bundle.min.css">
@@ -49,6 +50,7 @@
         </button>
         <a class="main-nav__logo">
           <picture class="picture-reset">
+            <source media="(max-width: 576px)" srcset="img/logo-320.svg">
             <source media="(max-width: 1400px)" srcset="img/logo-1024.svg">
             <img src="img/logo.svg" alt="Логотип Бланчард">
           </picture>
@@ -338,8 +340,9 @@
         <div class="galery-modal overflow">
           <div class="modal-wrap">
             <picture class="picture-reset">
+              <source media="(max-width: 576px)" srcset="img/galery-320-modal.jpg">
               <source media="(max-width: 1400px)" srcset="img/galery-1024-modal.jpg">
-              <img src="img/galery-modal.jpg" alt="«Женщина с граблями»">
+              <img class="galery-img-modal" src="img/galery-modal.jpg" alt="«Женщина с граблями»">
             </picture>
             <div class="modal-content">
               <h3 class="modal-title third-title title-reset">
@@ -672,13 +675,15 @@
               <div class="swiper-slide">
                 <div class="event-slide wow animate__fadeInUp" data-wow-duration="0.75s" data-wow-offset="50">
                   <picture class="picture-reset">
+                    <source class="event-slider__img" media="(max-width: 576px)" srcset="img/event-320-img1.jpg">
+                    <source class="event-slider__img" media="(max-width: 1000px)" srcset="img/event-768-img1.jpg">
                     <source class="event-slider__img" media="(max-width: 1400px)" srcset="img/event-1024-img1.jpg">
                     <img src="img/event-img1.jpg" class="event-slider__img" alt="Книжная гравюра">
                   </picture>
                   <span class="event-slider__address">Музей им. Щусева</span>
                   <span class="event-slider__address">с 20 марта по 30 апреля</span>
                   <h3 class="event-slider__title third-title title-reset">
-                    Книжная гравюра в живом<br>восприятии
+                    Книжная гравюра в <span>живом</span><br>восприятии
                   </h3>
                   <p class="event-slider__desc text-reset">
                     Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
@@ -692,6 +697,8 @@
               <div class="swiper-slide">
                 <div class="event-slide wow animate__fadeInUp" data-wow-duration="0.9s" data-wow-offset="50">
                   <picture class="picture-reset">
+                    <source class="event-slider__img" media="(max-width: 576px)" srcset="img/event-320-img2.jpg">
+                    <source class="event-slider__img" media="(max-width: 1000px)" srcset="img/event-768-img2.jpg">
                     <source class="event-slider__img" media="(max-width: 1400px)" srcset="img/event-1024-img2.jpg">
                     <img src="img/event-img2.jpg" class="event-slider__img" alt="Фото Дмитрий Петров и Сергей Ильин">
                   </picture>
@@ -712,6 +719,8 @@
               <div class="swiper-slide">
                 <div class="event-slide wow animate__fadeInUp" data-wow-duration="1.05s" data-wow-offset="50">
                   <picture class="picture-reset">
+                    <source class="event-slider__img" media="(max-width: 576px)" srcset="img/event-320-img3.jpg">
+                    <source class="event-slider__img" media="(max-width: 1000px)" srcset="img/event-768-img3.jpg">
                     <source class="event-slider__img" media="(max-width: 1400px)" srcset="img/event-1024-img3.jpg">
                     <img src="img/event-img3.jpg" class="event-slider__img" alt="Выставка">
                   </picture>
@@ -732,6 +741,8 @@
               <div class="swiper-slide">
                 <div class="event-slide">
                   <picture class="picture-reset">
+                    <source class="event-slider__img" media="(max-width: 576px)" srcset="img/event-320-img4.jpg">
+                    <source class="event-slider__img" media="(max-width: 1000px)" srcset="img/event-768-img4.jpg">
                     <source class="event-slider__img" media="(max-width: 1400px)" srcset="img/event-1024-img4.jpg">
                     <img src="img/event-img4.jpg" class="event-slider__img" alt="Фотографии из серии «Метафора»">
                   </picture>
@@ -752,6 +763,8 @@
               <div class="swiper-slide">
                 <div class="event-slide">
                   <picture class="picture-reset">
+                    <source class="event-slider__img" media="(max-width: 576px)" srcset="img/event-320-img5.jpg">
+                    <source class="event-slider__img" media="(max-width: 1000px)" srcset="img/event-768-img5.jpg">
                     <source class="event-slider__img" media="(max-width: 1400px)" srcset="img/event-1024-img5.jpg">
                     <img src="img/event-img5.jpg" class="event-slider__img" alt="Биеннале">
                   </picture>
@@ -783,8 +796,7 @@
           фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны
           с не уникальными данными до степени совершённой неузнаваемости, из-за чего возрастает их статус
           бесполезности.
-          Прежде всего, постоянное информационно-пропагандистское
-          <div class="tooltip">
+          Прежде всего, постоянное информационно-пропагандистское <button class="tooltip btn-reset" data-tippy-content="Пример современных тенденций — современная методология разработки">
             <svg class="tooltip__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -794,12 +806,13 @@
                 d="M7.26154 6.4551H8.73846V13H7.26154V6.4551ZM8 4.90259C7.71282 4.90259 7.4718 4.81126 7.27692 4.62861C7.09231 4.44597 7 4.22273 7 3.9589C7 3.69508 7.09231 3.47184 7.27692 3.28919C7.4718 3.0964 7.71282 3 8 3C8.28718 3 8.52308 3.09132 8.70769 3.27397C8.90256 3.44647 9 3.66464 9 3.92846C9 4.20243 8.90256 4.43582 8.70769 4.62861C8.52308 4.81126 8.28718 4.90259 8 4.90259Z"
                 fill="black" />
             </svg>
-            <span class="tooltip__content">Пример современных тенденций — современная методология разработки</span>
-          </div>обеспечение нашей деятельности однозначно фиксирует
+          </button> обеспечение нашей деятельности однозначно фиксирует
           необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия
           представителей
           оппозиции могут быть рассмотрены
-          <div class="tooltip">
+          <button class="tooltip btn-reset" data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы
+          вызывают
+          у вас эмоции">
             <svg class="tooltip__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -809,10 +822,7 @@
                 d="M7.26154 6.4551H8.73846V13H7.26154V6.4551ZM8 4.90259C7.71282 4.90259 7.4718 4.81126 7.27692 4.62861C7.09231 4.44597 7 4.22273 7 3.9589C7 3.69508 7.09231 3.47184 7.27692 3.28919C7.4718 3.0964 7.71282 3 8 3C8.28718 3 8.52308 3.09132 8.70769 3.27397C8.90256 3.44647 9 3.66464 9 3.92846C9 4.20243 8.90256 4.43582 8.70769 4.62861C8.52308 4.81126 8.28718 4.90259 8 4.90259Z"
                 fill="black" />
             </svg>
-            <span class="tooltip__content">Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы
-              вызывают
-              у вас эмоции</span>
-          </div> исключительно в разрезе маркетинговых и финансовых <div class="tooltip">
+          </button> исключительно в разрезе маркетинговых и финансовых <button class="tooltip btn-reset" data-tippy-content="В стремлении повысить качество">
             <svg class="tooltip__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -822,8 +832,7 @@
                 d="M7.26154 6.4551H8.73846V13H7.26154V6.4551ZM8 4.90259C7.71282 4.90259 7.4718 4.81126 7.27692 4.62861C7.09231 4.44597 7 4.22273 7 3.9589C7 3.69508 7.09231 3.47184 7.27692 3.28919C7.4718 3.0964 7.71282 3 8 3C8.28718 3 8.52308 3.09132 8.70769 3.27397C8.90256 3.44647 9 3.66464 9 3.92846C9 4.20243 8.90256 4.43582 8.70769 4.62861C8.52308 4.81126 8.28718 4.90259 8 4.90259Z"
                 fill="black" />
             </svg>
-            <span class="tooltip__content">В стремлении повысить качество</span>
-          </div> предпосылок. Банальные,
+          </button> предпосылок. Банальные,
           но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым
           свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершённой
           неузнаваемости. Подробнее: <a href="#" class="projects__link link-reset">blanchard-art.ru/projects</a>
@@ -926,7 +935,7 @@
                 <input class="contacts-form__input" type="tel" name="phone" id="contactPhone" placeholder="Телефон*">
               </label>
               <button class="contacts-form__btn btn-reset wow animate__bounceInUp" type="submit"
-                data-wow-duration="1.25s">Заказать обратный звонок</button>
+                data-wow-duration="1.25s">Заказать <span>обратный звонок</span></button>
             </form>
           </div>
           <div class="contacts-contact wow animate__fadeInRight" data-wow-duration="1.35s">
@@ -946,14 +955,17 @@
       </div>
     </section>
     <section class="map wow animate__fadeIn" data-wow-duration="0.75s">
-      <div id="map" style="width: 100%; height: 700px;"></div>
+      <div class="map-ymap" id="map" style="width: 100%;"></div>
     </section>
   </main>
   <footer class="footer" id="footer">
     <div class="container">
       <div class="footer-wrap">
         <a class="footer-wrap__logo link-reset">
-          <img src="img/logo.svg" alt="Логотип Бланчард">
+          <picture class="picture-reset">
+            <source media="(max-width: 576px)" srcset="img/logo-320.svg">
+            <img src="img/logo.svg" alt="Логотип Бланчард">
+          </picture>
         </a>
         <div class="footer-links">
           <a href="#" class="footer-link link-reset">
@@ -977,6 +989,8 @@
       </div>
     </div>
   </footer>
+  <script src="libs/popper.min.js"></script>
+  <script src="libs/tippy-bundle.umd.min.js"></script>
   <script src="libs/wow.min.js"></script>
   <script src="libs/inputmask.min.js"></script>
   <script src="libs/just-validate.min.js"></script>
