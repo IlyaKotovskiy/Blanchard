@@ -1428,6 +1428,7 @@ body {
   line-height: 32px;
   font-weight: 400;
   font-size: 16px;
+  -webkit-appearance: none;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
@@ -2770,6 +2771,14 @@ body {
   .nav-form__button {
     width: 18px;
     height: 18px;
+  }
+
+  .header-mobile-btn.active~.main-nav__list {
+    padding: 130px 0 50px 15px;
+  }
+
+  .header-mobile-btn.active~.main-nav__account {
+    left: 15px;
   }
 
   .header-mobile-form {
