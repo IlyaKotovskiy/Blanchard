@@ -3019,7 +3019,7 @@ body {
   }
 
   .contacts-form__btn {
-    position: static;
+    position: relative;
     bottom: unset;
   }
 
