@@ -4,6 +4,23 @@ window.onload = () => {
   document.body.classList.remove('hidden');
 };
 
+
+// LIST DROPDOWN
+
+const dropBtn = document.querySelectorAll('.main-screen-nav__btn');
+
+dropBtn.forEach(btn => {
+  btn.addEventListener('click', e => {
+    const ownDropdown = e.currentTarget;
+    ownDropdown.classList.toggle('active');
+
+    dropBtn.forEach(el => {
+      if (el !== ownDropdown)
+        el.classList.remove('active');
+    });
+  });
+});
+
 // CUSTOM SELECT
 
 // main
@@ -162,7 +179,6 @@ const swiperEvent = new Swiper('.event-swiper', {
 const swiperProjects = new Swiper('.projects-swiper', {
   slidesPerView: 'auto',
   allowTouchMove: false,
-  loop: true,
   autoplay: {
     delay: 5000,
     disableOnInteraction: false // продолжает autoplay если пользователь повзаимодействовал со слайдером или слайдом
@@ -342,8 +358,7 @@ tippy('[data-tippy-content]');
 
 
 
-
-// MOBILE START
+// MOBILE ..START
 
 // BURGER
 const burger = document.querySelectorAll('.header-mobile-btn');
@@ -366,4 +381,4 @@ closeSearch.addEventListener('click', () => {
   document.querySelector('.header-mobile-form').classList.remove('active');
 })
 
-// MOBILE END
+// MOBILE ..END
